@@ -1,15 +1,9 @@
 <section id="hero">
   <div class="hero"></div>
   <div class="hero-text">
-    <p class="text-header">
-      Find any <span class="bg-blue">country</span> in the world.
-    </p>
+    <p class="text-header">Find any <span>country</span> in the world.</p>
     <div class="contain-form">
-      <form
-        #dataForm="ngForm"
-        (ngSubmit)="onSubmit()"
-        class="flex-nowrap d-flex"
-      >
+      <form #dataForm="ngForm" (ngSubmit)="onSubmit()">
         <input
           type="text"
           class="form-control"

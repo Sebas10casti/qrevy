@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'sass/_variables'
+@import 'sass/_breakpoints'
 @import 'sass/_grid'
 @import 'sass/_form'
 @import 'sass/_button'
@@ -8,7 +9,9 @@
 
 body
   font-family: $font-family
-
+  #wrapper
+    @include md
+      padding-left: 50px
   .bg-like
     color: #F2C94C !important
   .bg-dislike

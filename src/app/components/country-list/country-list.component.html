@@ -6,7 +6,9 @@
           | filterCountry
             : { country: filter.country, category: filter.category }
       "
-      [ngClass]="{ col: columnIsVisible(region.countries) == true }"
+      [ngClass]="{
+        'col-6 col-lg': columnIsVisible(region.countries) == true
+      }"
     >
       <div *ngIf="columnIsVisible(region.countries)">
         <span>{{ region.name }}</span>
