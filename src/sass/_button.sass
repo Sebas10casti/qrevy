@@ -1,0 +1,28 @@
+
+%btn
+  display: inline-block
+  font-weight: 400
+  color: #212529
+  text-align: center
+  vertical-align: middle
+  user-select: none
+  background-color: transparent
+  border: 1px solid transparent
+  padding: .375rem .75rem
+  font-size: 1rem
+  line-height: 1.5
+  border-radius: .25rem
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+
+.btn-test
+  @extend %btn
+  color: #fff
+  background-color: $colorPrimary
+  border-color: darken($colorPrimary, 5%)
+  height: 70px
+  width: 70px
+  border-radius: 0px 11px 11px 0px
+  &:hover
+    color: #fff
+    background-color: darken($colorPrimary, 10%)
+    border-color: darken($colorPrimary, 15%)

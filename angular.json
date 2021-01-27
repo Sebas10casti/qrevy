@@ -94,7 +94,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "qrevy"
+  "defaultProject": "qrevy",
+  "cli": {
+    "analytics": false
+  }
 }

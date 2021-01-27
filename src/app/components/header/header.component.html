@@ -1,0 +1,47 @@
+<section id="hero">
+  <div class="hero"></div>
+  <div class="hero-text">
+    <p class="text-header">
+      Find any <span class="bg-blue">country</span> in the world.
+    </p>
+    <div class="contain-form">
+      <form
+        #dataForm="ngForm"
+        (ngSubmit)="onSubmit()"
+        class="flex-nowrap d-flex"
+      >
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search country"
+          aria-label="Search country"
+          aria-describedby="Search country"
+          [(ngModel)]="form.country"
+          name="country"
+        />
+        <div class="select_box">
+          <select
+            aria-label="Select Category"
+            [(ngModel)]="form.category"
+            name="category"
+          >
+            <option selected value="Show All">Show All</option>
+            <option value="Favorites">Favorites</option>
+            <option value="Africa">Africa</option>
+            <option value="Americas">Americas</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europa</option>
+            <option value="Oceania">Oceania</option>
+          </select>
+        </div>
+        <button
+          (click)="dataForm.ngSubmit.emit()"
+          type="button"
+          class="btn btn-test"
+        >
+          <fa-icon [icon]="faSearch" size="lg"></fa-icon>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

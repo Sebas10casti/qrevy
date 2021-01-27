@@ -1,0 +1,46 @@
+.s-modal-open
+  overflow: hidden
+
+.modal-container
+  display: none
+
+.s-modal
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 1000
+  overflow: auto
+  display: flex
+  justify-content: center
+  align-items: center
+
+.s-modal-body
+  min-width: $modalWidthMin
+  min-height: $modalHeighthMin
+  width: auto
+  height: auto
+  padding: 20px
+  padding-left: 50px
+  background: #fff
+  margin: 40px
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3)
+  border-radius: 10px
+
+.s-background
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background-color: rgba(9, 41, 94, 0.7)
+  opacity: 0.75
+  z-index: 900
+
+.close-modal
+  display: block
+  text-align: end
+  a
+    cursor: pointer
+    color: $colorGray

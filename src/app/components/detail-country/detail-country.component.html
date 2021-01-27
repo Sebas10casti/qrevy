@@ -1,0 +1,38 @@
+<div>
+  <div class="s-modal">
+    <div class="s-modal-body" *ngIf="existData(data)">
+      <span class="close-modal"
+        ><a (click)="close()"><fa-icon [icon]="faTimes" size="lg"></fa-icon></a
+      ></span>
+      <div class="s-modal-header">
+        <h2>
+          {{ data.name }}
+          <span
+            [ngClass]="{
+              'bg-like': statusLike == true,
+              'bg-dislike': statusLike == false
+            }"
+            (click)="like(data)"
+            ><fa-icon [icon]="faStar" class="ml-1" size="sm"></fa-icon
+          ></span>
+        </h2>
+      </div>
+
+      <ul class="list-detail">
+        <li><b>Region: </b>{{ data.region }}</li>
+        <li><b>Population: </b>{{ formatterPoblation(data.population) }}</li>
+        <li><b>Capital: </b>{{ data.capital }}</li>
+        <li><b>Currency: </b>{{ data.currencies[0].name }}</li>
+        <li><b>Languaje: </b>{{ data.languages[0].name }}</li>
+        <li>
+          <b>Border Countries </b>{{ borderCountries(data.borders, regions) }}
+        </li>
+        <li>
+          <span class="d-block"><b>Flag </b>:</span>
+          <img src="{{ data.flag }}" alt="" width="181" class="mt-2" />
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="s-background"></div>
+</div>

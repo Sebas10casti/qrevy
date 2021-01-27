@@ -1,0 +1,35 @@
+<section id="country-list">
+  <div class="row" *ngIf="existData('regions')">
+    <div
+      *ngFor="
+        let region of regions
+          | filterCountry
+            : { country: filter.country, category: filter.category }
+      "
+      [ngClass]="{ col: columnIsVisible(region.countries) == true }"
+    >
+      <div *ngIf="columnIsVisible(region.countries)">
+        <span>{{ region.name }}</span>
+        <ul>
+          <li *ngFor="let item of region.countries">
+            <a (click)="openModal('modalCountry', item, regions)">
+              <img src="{{ item.flag }}" alt="" width="18" class="mr-2" />
+              {{ item.name }}
+              <span class="bg-like" *ngIf="existLike(item)"
+                ><fa-icon [icon]="faStar" class="ml-1" size="sm"></fa-icon
+              ></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-detail-country
+  id="modalCountry"
+  class="modal-container"
+  [data]="dataModal"
+  [regions]="regionsModal"
+>
+</app-detail-country>

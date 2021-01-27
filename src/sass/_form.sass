@@ -1,0 +1,58 @@
+::placeholder
+  font-style: normal
+  font-weight: normal
+  font-size: 19px
+  line-height: 22px
+
+.contain-form
+  width: 700px
+  height: 80px
+  top: 100%
+
+  /** Overwrites the default form styles defined by the startup framework */
+  input, .select_box, button
+    box-sizing: border-box
+    box-shadow: 0px 4px 4px $colorBlack
+  input
+    height: 70px
+    border-right: none
+    border-radius: 10px
+    font-size: 19px
+    min-width: 70%
+    background: $colorWhite
+    border: 1px solid #E0E0E0
+    box-sizing: border-box
+    box-shadow: 0px 4px 4px $colorBlack
+    border-radius: 10px 0 0 10px
+    padding-left: 20px
+
+  .select_box
+    width: 160px
+    overflow: hidden
+    border: 1px solid #ced4da
+    border-right: none
+    position: relative
+    background-color: $colorWhite
+    /** change color arrow in the select*/
+    &:after
+      width: 0
+      height: 0
+      border-left: 6px solid transparent
+      border-right: 6px solid transparent
+      border-top: 6px solid $colorPrimary
+      position: absolute
+      top: 48%
+      right: 5px
+      content: ""
+      z-index: 98
+    & select
+      width: 180px
+      border: none
+      position: relative
+      z-index: 99
+      background: none
+      height: 100%
+      color: $colorSelect
+      text-align-last: center
+      padding-right: 25px
+      font-size: 19px
